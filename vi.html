@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="vi" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chính Sách Bảo Mật - Famia</title>
+    <link rel="icon" href="https://famia.app/favicon.ico">
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #1a1a1a;
+            --secondary-color: #666666;
+            --accent-color: #007AFF;
+            --border-color: #e5e5e5;
+            --card-bg: #f8f8f8;
+            --warning-color: #FF9500;
+            --success-color: #34C759;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #1a1a1a;
+                --text-color: #f5f5f5;
+                --secondary-color: #999999;
+                --accent-color: #0A84FF;
+                --border-color: #333333;
+                --card-bg: #2a2a2a;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-top: 20px;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 18px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, var(--accent-color), #5856D6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .updated {
+            color: var(--secondary-color);
+            font-size: 14px;
+        }
+
+        .language-bar {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+            position: sticky;
+            top: 0;
+            background: var(--bg-color);
+            padding: 10px 0;
+            z-index: 100;
+        }
+
+        .language-selector {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 8px 12px;
+            font-size: 14px;
+            color: var(--text-color);
+            cursor: pointer;
+        }
+
+        .section {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-bottom: 16px;
+            color: var(--accent-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 24px;
+            background: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: var(--text-color);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 10px 0;
+            padding-left: 28px;
+            position: relative;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        li:last-child {
+            border-bottom: none;
+        }
+
+        li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success-color);
+            font-weight: bold;
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, rgba(0, 122, 255, 0.1), rgba(88, 86, 214, 0.1));
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .highlight p {
+            margin: 0;
+            font-weight: 500;
+        }
+
+        .warning {
+            background: linear-gradient(135deg, rgba(255, 149, 0, 0.1), rgba(255, 59, 48, 0.1));
+            border-left-color: var(--warning-color);
+        }
+
+        .warning li::before {
+            content: '⚠';
+            color: var(--warning-color);
+        }
+
+        .contact-box {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .contact-box a {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 10px;
+        }
+
+        .contact-box a:hover {
+            opacity: 0.9;
+        }
+
+        .see-also {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .see-also a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: var(--secondary-color);
+            font-size: 14px;
+        }
+
+        /* RTL Support */
+        [dir="rtl"] {
+            text-align: right;
+        }
+
+        [dir="rtl"] li {
+            padding-left: 0;
+            padding-right: 28px;
+        }
+
+        [dir="rtl"] li::before {
+            left: auto;
+            right: 0;
+        }
+
+        [dir="rtl"] h2::before {
+            margin-left: 10px;
+            margin-right: 0;
+        }
+
+        [dir="rtl"] .highlight,
+        [dir="rtl"] .warning {
+            border-left: none;
+            border-right: 4px solid var(--accent-color);
+        }
+
+        [dir="rtl"] .warning {
+            border-right-color: var(--warning-color);
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="language-bar">
+        <select class="language-selector" onchange="window.location.href=this.value + '.html'">
+            <option value="es" >Español</option>
+<option value="en" >English</option>
+<option value="fr" >Français</option>
+<option value="de" >Deutsch</option>
+<option value="it" >Italiano</option>
+<option value="pt" >Português</option>
+<option value="ja" >日本語</option>
+<option value="zh-Hans" >简体中文</option>
+<option value="ar" >العربية</option>
+<option value="ko" >한국어</option>
+<option value="fil" >Filipino</option>
+<option value="hi" >हिन्दी</option>
+<option value="id" >Bahasa Indonesia</option>
+<option value="pl" >Polski</option>
+<option value="th" >ไทย</option>
+<option value="tr" >Türkçe</option>
+<option value="vi" selected>Tiếng Việt</option>
+        </select>
+    </div>
+    
+
+    <div class="header">
+        <img src="https://famia.app/icon.png" alt="Famia" class="logo" onerror="this.style.display='none'">
+        <h1>Chính Sách Bảo Mật</h1>
+        <p class="updated">Cập nhật lần cuối: Tháng 1 năm 2025</p>
+    </div>
+
+    <div class="section"><h2>Giới thiệu</h2><p>Tại Famia, quyền riêng tư của bạn là ưu tiên hàng đầu của chúng tôi. Chính sách này giải thích cách chúng tôi xử lý thông tin của bạn khi bạn sử dụng ứng dụng quản lý gia đình của chúng tôi.</p></div><div class="section"><h2>Thông Tin Chúng Tôi Thu Thập</h2><p><strong>Dữ liệu BẠN cung cấp:</strong></p><ul><li>Thông tin thành viên gia đình (tên, ngày sinh, ảnh)</li><li>Thông tin sức khỏe (dị ứng, nhóm máu, thuốc, cuộc hẹn y tế)</li><li>Tài liệu cá nhân (CMND, hộ chiếu, thẻ)</li><li>Thông tin tài chính (chi phí, ngân sách)</li><li>Thông tin phương tiện, thói quen, trường học và thú cưng</li></ul></div><div class="section"><h2>Dữ Liệu Của Bạn Được Lưu Trữ Ở Đâu</h2><p><strong>Tất cả dữ liệu của bạn được lưu trữ độc quyền trong:</strong></p><ul><li>Thiết bị của bạn - Dữ liệu được lưu cục bộ trên iPhone hoặc iPad của bạn</li><li>iCloud cá nhân của bạn - Nếu bật iCloud, dữ liệu sẽ đồng bộ với tài khoản Apple của bạn</li></ul><div class="highlight"><p>Famia KHÔNG có máy chủ riêng. Chúng tôi không thu thập, lưu trữ hoặc truy cập dữ liệu cá nhân của bạn.</p></div></div><div class="section"><h2>Dịch Vụ Bên Thứ Ba</h2><p><strong>Chúng tôi chỉ sử dụng dịch vụ Apple:</strong></p><ul><li>iCloud/CloudKit để đồng bộ giữa các thiết bị</li><li>StoreKit để xử lý mua hàng trong ứng dụng</li><li>Face ID/Touch ID để xác thực sinh trắc học (tùy chọn)</li></ul><p><em>Chúng tôi không sử dụng dịch vụ phân tích, quảng cáo hoặc trình theo dõi bên thứ ba.</em></p></div><div class="section"><h2>Bảo Mật</h2><ul><li>Dữ liệu của bạn được bảo vệ bằng mã hóa của Apple</li><li>Bạn có thể bật khóa sinh trắc học (Face ID/Touch ID)</li><li>Đồng bộ iCloud sử dụng mã hóa đầu cuối</li></ul></div><div class="section"><h2>Quyền Của Bạn</h2><p><strong>Bạn có toàn quyền kiểm soát dữ liệu của mình:</strong></p><ul><li>Truy cập - Bạn có thể xem tất cả dữ liệu trong ứng dụng</li><li>Xuất - Bạn có thể xuất dữ liệu bất cứ lúc nào</li><li>Xóa - Bạn có thể xóa bất kỳ dữ liệu nào hoặc gỡ cài đặt ứng dụng</li><li>Tính di động - Dữ liệu của bạn nằm trong iCloud và có thể truy cập từ bất kỳ thiết bị Apple nào</li></ul></div><div class="section"><h2>Liên Hệ</h2><p>Nếu bạn có câu hỏi về chính sách bảo mật này:</p></div>
+
+    
+    <div class="contact-box">
+        <h2>Liên Hệ</h2>
+        <p>Nếu bạn có câu hỏi về chính sách bảo mật này:</p>
+        <a href="mailto:privacy@famia.app">privacy@famia.app</a>
+    </div>
+    
+
+    <div class="see-also">
+        <p>Xem thêm: <a href="../terms/vi.html">Điều Khoản Sử Dụng</a></p>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Famia. All rights reserved.</p>
+    </footer>
+</body>
+</html>
