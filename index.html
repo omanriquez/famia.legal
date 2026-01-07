@@ -3,30 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legal - Famia</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            max-width: 600px;
-            margin: 50px auto;
-            padding: 20px;
-            text-align: center;
-        }
-        a {
-            display: block;
-            padding: 20px;
-            margin: 10px 0;
-            background: #007AFF;
-            color: white;
-            text-decoration: none;
-            border-radius: 10px;
-        }
-        a:hover { opacity: 0.9; }
-    </style>
+    <title>Redirecting... - Famia</title>
+    <script>
+        (function() {
+            var supportedLangs = ['es', 'en', 'fr', 'de', 'it', 'pt', 'ja', 'zh-Hans', 'ar', 'ko', 'fil', 'hi', 'id', 'pl', 'th', 'tr', 'vi'];
+            var browserLang = navigator.language || navigator.userLanguage;
+            var lang = browserLang.split('-')[0];
+
+            // Mapeo especial para chino simplificado
+            if (browserLang.startsWith('zh')) {
+                lang = 'zh-Hans';
+            }
+
+            if (!supportedLangs.includes(lang)) {
+                lang = 'en';
+            }
+
+            window.location.replace(lang + '.html');
+        })();
+    </script>
+    <noscript>
+        <meta http-equiv="refresh" content="0; url=en.html">
+    </noscript>
 </head>
 <body>
-    <h1>Famia Legal</h1>
-    <a href="privacy/">Privacy Policy</a>
-    <a href="terms/">Terms of Use</a>
+    <p>Redirecting...</p>
 </body>
 </html>
