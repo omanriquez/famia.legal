@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="hi" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>उपयोग की शर्तें - Famia</title>
+    <link rel="icon" href="https://famia.app/favicon.ico">
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #1a1a1a;
+            --secondary-color: #666666;
+            --accent-color: #007AFF;
+            --border-color: #e5e5e5;
+            --card-bg: #f8f8f8;
+            --warning-color: #FF9500;
+            --success-color: #34C759;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #1a1a1a;
+                --text-color: #f5f5f5;
+                --secondary-color: #999999;
+                --accent-color: #0A84FF;
+                --border-color: #333333;
+                --card-bg: #2a2a2a;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-top: 20px;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 18px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, var(--accent-color), #5856D6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .updated {
+            color: var(--secondary-color);
+            font-size: 14px;
+        }
+
+        .language-bar {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+            position: sticky;
+            top: 0;
+            background: var(--bg-color);
+            padding: 10px 0;
+            z-index: 100;
+        }
+
+        .language-selector {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 8px 12px;
+            font-size: 14px;
+            color: var(--text-color);
+            cursor: pointer;
+        }
+
+        .section {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-bottom: 16px;
+            color: var(--accent-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 24px;
+            background: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: var(--text-color);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 10px 0;
+            padding-left: 28px;
+            position: relative;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        li:last-child {
+            border-bottom: none;
+        }
+
+        li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success-color);
+            font-weight: bold;
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, rgba(0, 122, 255, 0.1), rgba(88, 86, 214, 0.1));
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .highlight p {
+            margin: 0;
+            font-weight: 500;
+        }
+
+        .warning {
+            background: linear-gradient(135deg, rgba(255, 149, 0, 0.1), rgba(255, 59, 48, 0.1));
+            border-left-color: var(--warning-color);
+        }
+
+        .warning li::before {
+            content: '⚠';
+            color: var(--warning-color);
+        }
+
+        .contact-box {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .contact-box a {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 10px;
+        }
+
+        .contact-box a:hover {
+            opacity: 0.9;
+        }
+
+        .see-also {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .see-also a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: var(--secondary-color);
+            font-size: 14px;
+        }
+
+        /* RTL Support */
+        [dir="rtl"] {
+            text-align: right;
+        }
+
+        [dir="rtl"] li {
+            padding-left: 0;
+            padding-right: 28px;
+        }
+
+        [dir="rtl"] li::before {
+            left: auto;
+            right: 0;
+        }
+
+        [dir="rtl"] h2::before {
+            margin-left: 10px;
+            margin-right: 0;
+        }
+
+        [dir="rtl"] .highlight,
+        [dir="rtl"] .warning {
+            border-left: none;
+            border-right: 4px solid var(--accent-color);
+        }
+
+        [dir="rtl"] .warning {
+            border-right-color: var(--warning-color);
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="language-bar">
+        <select class="language-selector" onchange="window.location.href=this.value + '.html'">
+            <option value="es" >Español</option>
+<option value="en" >English</option>
+<option value="fr" >Français</option>
+<option value="de" >Deutsch</option>
+<option value="it" >Italiano</option>
+<option value="pt" >Português</option>
+<option value="ja" >日本語</option>
+<option value="zh-Hans" >简体中文</option>
+<option value="ar" >العربية</option>
+<option value="ko" >한국어</option>
+<option value="fil" >Filipino</option>
+<option value="hi" selected>हिन्दी</option>
+<option value="id" >Bahasa Indonesia</option>
+<option value="pl" >Polski</option>
+<option value="th" >ไทย</option>
+<option value="tr" >Türkçe</option>
+<option value="vi" >Tiếng Việt</option>
+        </select>
+    </div>
+    
+
+    <div class="header">
+        <img src="https://famia.app/icon.png" alt="Famia" class="logo" onerror="this.style.display='none'">
+        <h1>उपयोग की शर्तें</h1>
+        <p class="updated">अंतिम अपडेट: जनवरी 2025</p>
+    </div>
+
+    <div class="section"><h2>1. शर्तों की स्वीकृति</h2><p>Famia को डाउनलोड, इंस्टॉल या उपयोग करके, आप इन उपयोग की शर्तों से सहमत होते हैं। यदि आप सहमत नहीं हैं, तो ऐप का उपयोग न करें।</p></div><div class="section"><h2>2. सेवा विवरण</h2><p><strong>Famia एक पारिवारिक संगठन ऐप है जो आपको अनुमति देता है:</strong></p><div><ul><li>परिवार के सदस्यों की जानकारी प्रबंधित करें</li><li>दस्तावेज़, चिकित्सा अपॉइंटमेंट और कार्यक्रम व्यवस्थित करें</li><li>पारिवारिक खर्चों और बजट को ट्रैक करें</li><li>दिनचर्या, वाहन, पालतू जानवर और अधिक प्रबंधित करें</li></ul></div></div><div class="section"><h2>3. उपयोग की आवश्यकताएं</h2><div><ul><li>ऐप का उपयोग करने के लिए आपकी आयु कम से कम 17 वर्ष होनी चाहिए</li><li>आपको एक संगत Apple डिवाइस (iPhone या iPad) की आवश्यकता है</li><li>कुछ सुविधाओं के लिए Apple ID खाता आवश्यक है</li></ul></div></div><div class="section"><h2>4. आपका खाता और डेटा</h2><div><ul><li>आप जो जानकारी दर्ज करते हैं उसके लिए आप जिम्मेदार हैं</li><li>आपका डेटा आपके डिवाइस और व्यक्तिगत iCloud पर संग्रहीत है</li><li>हमारे पास आपके व्यक्तिगत डेटा तक पहुंच नहीं है</li><li>आप अपने डिवाइस की सुरक्षा बनाए रखने के लिए जिम्मेदार हैं</li></ul></div></div><div class="section"><h2>5. इन-ऐप खरीदारी</h2><div><ul><li>Famia बुनियादी सुविधाओं के साथ एक मुफ्त संस्करण प्रदान करता है</li><li>Famia Pro एक वार्षिक सदस्यता है जो सभी सुविधाओं को अनलॉक करती है</li><li>खरीदारी Apple के माध्यम से संसाधित की जाती है और उनकी शर्तों के अधीन है</li></ul></div></div><div class="section"><h2>6. दायित्व की सीमा</h2><div class="warning"><ul><li>ऐप "जैसा है" प्रदान किया जाता है</li><li>हम गारंटी नहीं देते कि यह त्रुटि-मुक्त होगा</li><li>हम डेटा हानि के लिए जिम्मेदार नहीं हैं (नियमित रूप से बैकअप लें)</li><li>हम ऐप जानकारी के आधार पर लिए गए निर्णयों के लिए जिम्मेदार नहीं हैं</li></ul></div></div><div class="section"><h2>7. स्वास्थ्य जानकारी</h2><div class="highlight warning"><p>Famia में स्वास्थ्य जानकारी केवल संदर्भ के लिए है। यह पेशेवर चिकित्सा सलाह नहीं है। चिकित्सा निर्णयों के लिए हमेशा स्वास्थ्य पेशेवरों से परामर्श करें।</p></div></div>
+
+    
+
+    <div class="see-also">
+        <p>यह भी देखें: <a href="../privacy/hi.html">गोपनीयता नीति</a></p>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Famia. All rights reserved.</p>
+    </footer>
+</body>
+</html>
