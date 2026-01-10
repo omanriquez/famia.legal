@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="id" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dukungan - Famia</title>
+    <link rel="icon" href="https://omanriquez.github.io/famia.legal/favicon.ico">
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #1a1a1a;
+            --secondary-color: #666666;
+            --accent-color: #007AFF;
+            --border-color: #e5e5e5;
+            --card-bg: #f8f8f8;
+            --warning-color: #FF9500;
+            --success-color: #34C759;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #1a1a1a;
+                --text-color: #f5f5f5;
+                --secondary-color: #999999;
+                --accent-color: #0A84FF;
+                --border-color: #333333;
+                --card-bg: #2a2a2a;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-top: 20px;
+        }
+
+        .icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, var(--accent-color), #5856D6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--text-color);
+        }
+
+        .subtitle {
+            color: var(--secondary-color);
+            font-size: 16px;
+        }
+
+        .section {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border-color);
+        }
+
+        h2 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--text-color);
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 20px;
+            margin-bottom: 12px;
+            color: var(--text-color);
+        }
+
+        p {
+            color: var(--secondary-color);
+            margin-bottom: 14px;
+            font-size: 15px;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 14px;
+        }
+
+        li {
+            color: var(--text-color);
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        .highlight {
+            background: rgba(0, 122, 255, 0.1);
+            border-left: 4px solid var(--accent-color);
+            padding: 16px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .highlight p {
+            color: var(--text-color);
+            margin: 0;
+            font-weight: 500;
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, rgba(0, 122, 255, 0.1), rgba(88, 86, 214, 0.1));
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .contact-box h3 {
+            margin-top: 0;
+            color: var(--accent-color);
+        }
+
+        .contact-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 12px 24px;
+            background: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: opacity 0.2s;
+        }
+
+        .contact-link:hover {
+            opacity: 0.8;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: var(--secondary-color);
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .icon-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 16px;
+        }
+
+        .icon-item::before {
+            content: "✓";
+            color: var(--success-color);
+            font-weight: bold;
+            margin-right: 12px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="icon">🛟</div>
+        <h1>Pusat Dukungan</h1>
+        <p class="subtitle">Kami di sini untuk membantu</p>
+    </div>
+
+    <div class="section">
+        <h2>Pertanyaan yang Sering Diajukan</h2>
+
+        <h3>Bagaimana cara kerja sinkronisasi iCloud?</h3>
+        <p>Famia menggunakan iCloud untuk menyinkronkan data Anda secara otomatis di semua perangkat Apple Anda. Pastikan iCloud diaktifkan di perangkat Anda dan Anda masuk dengan Apple ID Anda.</p>
+
+        <h3>Berapa banyak anggota yang dapat saya tambahkan?</h3>
+        <p>Versi gratis Famia memungkinkan Anda menambahkan hingga 3 anggota keluarga. Dengan Famia Pro, Anda dapat menambahkan anggota tanpa batas.</p>
+
+        <h3>Bagaimana cara mengaktifkan Face ID/Touch ID?</h3>
+        <p>Buka Pengaturan di aplikasi dan aktifkan "Autentikasi Biometrik". Ini akan melindungi informasi keluarga Anda dengan Face ID atau Touch ID.</p>
+
+        <h3>Bisakah saya mengekspor data saya?</h3>
+        <p>Ya, Anda dapat mengekspor semua data Anda dari bagian Pengaturan. Data diekspor dalam format PDF.</p>
+
+        <h3>Apakah data saya aman?</h3>
+        <p>Tentu saja. Semua data Anda disimpan hanya di perangkat Anda dan di iCloud pribadi Anda. Famia tidak memiliki akses ke informasi Anda dan kami tidak membagikannya dengan pihak ketiga.</p>
+
+        <h3>Bagaimana cara kerja uji coba gratis Famia Pro?</h3>
+        <p>Famia Pro menawarkan uji coba gratis selama 7 hari. Selama periode ini, Anda akan memiliki akses penuh ke semua fitur premium. Anda dapat membatalkan kapan saja dari akun Apple ID Anda.</p>
+
+        <h3>Bisakah saya menggunakan Famia di iPad dan iPhone?</h3>
+        <p>Ya, Famia dioptimalkan untuk iPhone, iPad, dan Mac (Catalyst). Data Anda disinkronkan secara otomatis di semua perangkat Anda.</p>
+    </div>
+
+    <div class="section">
+        <h2>Pemecahan Masalah</h2>
+
+        <h3>Sinkronisasi tidak berfungsi</h3>
+        <ul>
+            <li>Verifikasi bahwa iCloud diaktifkan di Pengaturan → [Nama Anda] → iCloud</li>
+            <li>Pastikan Anda memiliki koneksi internet</li>
+            <li>Periksa apakah Anda memiliki penyimpanan iCloud yang tersedia</li>
+            <li>Coba tutup dan buka kembali aplikasi</li>
+        </ul>
+
+        <h3>Aplikasi menutup secara tak terduga</h3>
+        <ul>
+            <li>Pastikan Anda memiliki versi iOS terbaru yang terinstal</li>
+            <li>Perbarui Famia ke versi terbaru yang tersedia</li>
+            <li>Restart perangkat Anda</li>
+            <li>Jika masalah berlanjut, hubungi dukungan</li>
+        </ul>
+
+        <h3>Tidak bisa memulihkan pembelian saya</h3>
+        <ul>
+            <li>Buka Pengaturan → Famia Pro → Pulihkan Pembelian</li>
+            <li>Pastikan Anda menggunakan Apple ID yang sama yang Anda gunakan untuk pembelian</li>
+            <li>Periksa koneksi internet Anda</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Laporkan Masalah</h2>
+        <p>Jika Anda menemukan bug atau memiliki saran, kami ingin mendengar dari Anda. Umpan balik Anda membantu kami meningkatkan Famia.</p>
+
+        <div class="highlight">
+            <p>💡 Saat melaporkan masalah, sertakan:</p>
+        </div>
+
+        <ul>
+            <li>Versi iOS yang Anda gunakan</li>
+            <li>Model perangkat (iPhone 15, iPad Pro, dll.)</li>
+            <li>Deskripsi terperinci tentang masalah</li>
+            <li>Langkah-langkah untuk mereproduksi kesalahan</li>
+            <li>Screenshot jika memungkinkan</li>
+        </ul>
+
+        <div class="contact-box">
+            <h3>Hubungi Kami</h3>
+            <p>Laporkan masalah atau saran di GitHub:</p>
+            <a href="https://github.com/omanriquez/famia.legal/issues" class="contact-link">Buka GitHub Issues</a>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Sumber Daya Tambahan</h2>
+        <div class="icon-item">
+            <span><strong>Kebijakan Privasi:</strong> Pelajari bagaimana kami melindungi informasi Anda</span>
+        </div>
+        <div class="icon-item">
+            <span><strong>Ketentuan Penggunaan:</strong> Kondisi penggunaan Famia</span>
+        </div>
+        <div class="icon-item">
+            <span><strong>Situs Web:</strong> Informasi lebih lanjut tentang Famia</span>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p><strong>Famia</strong> - Keluarga Anda terorganisir</p>
+        <p>
+            <a href="../privacy/id.html">Privasi</a> •
+            <a href="../terms/id.html">Ketentuan</a> •
+            <a href="https://omanriquez.github.io/famia.legal/">Beranda</a>
+        </p>
+        <p style="margin-top: 20px; font-size: 13px;">
+            Terakhir diperbarui: Januari 2025
+        </p>
+    </div>
+</body>
+</html>
